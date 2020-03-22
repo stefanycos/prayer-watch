@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div>
+            <b-alert dismissible show variant="warning"><a href="#" class="alert-link">Warning Alert</a></b-alert>
+        </div>
+
         <!-- Menu -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Home</a>
@@ -77,7 +81,8 @@ export default {
         return {
             selected: [],
             user: null,
-            availableHours: this.activeHours
+            dismissSecs: 5,
+            dismissCountDown: 0
         }
     },
     computed: {
@@ -88,10 +93,9 @@ export default {
 
         activeHours() {
             return this.$store.getters.activeHours
-        }
-
-        
+        },
     },
+    
     methods: {
         ...mapActions(['register']),
 
@@ -100,9 +104,7 @@ export default {
                 hour: this.selected,
                 user: this.user
             }
-        
             this.register(schedule)
-            
         }
     },
     

@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 export default {
     state: {
         prayer: {
@@ -27,6 +29,11 @@ export default {
     
     mutations: {
         register(state, { user, hour }) {
+            Vue.prototype.$http('prayer-watch/prayers.json').then(resp => {
+                const data = resp.data
+                state.prayer = data
+            })
+
             let schedules = state.prayer.schedules
            
             hour.forEach(function(hour){
@@ -34,11 +41,15 @@ export default {
                    if (schedules[index].hour == hour) {
                       if(schedules[index].user == '' || schedules[index].user){
                             schedules[index].user = user
-                       }
+                      }
                     }
                 }
              });
-  
+
+             let prayers = state.prayer
+             
+             Vue.prototype.$http.put('prayer-watch.json', { prayers })
+
         },
     },
     actions: {
@@ -56,6 +67,11 @@ export default {
         },
 
         activeHours(state) {
+            Vue.prototype.$http('prayer-watch/prayers.json').then(resp => {
+                const data = resp.data
+                state.prayer = data
+            })
+            
             return state.prayer.schedules.filter(function(hour) {
                  return !hour.user
              })
