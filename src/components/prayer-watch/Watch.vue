@@ -4,7 +4,7 @@
             <div class="card-body">
                 <p class="card-text">
                    <b-form-input v-model="search" id="search" placeholder="Digite um nome para buscar"></b-form-input>
-                   <button @click="pushBack" type="button" style="margin-top: 10px; margin-left: 10px" class="btn btn-info">Registrar-se na lista de oração</button>
+                   <button @click="pushBack" type="button" style="margin-top: 10px; margin-left: 10px" class="btn btn-info">Clique aqui para retornar</button>
                 </p>
             </div>   
         </div>  

@@ -14,18 +14,21 @@
 
             <div class="card bg-light" style="margin-top: 20px; margin-bottom: 20px" >
                <div class="card-body">
+                    <div class="card-title text-center" style="margin-top: 10px"><b>Digite seu nome e escolha o(os) horário(os), por último, clique em Registrar. </b></div>
+                    <hr>
                     <p class="card-text">
                         <b-form>
-                            <b-form-group
-                                id="user"
-                                label="Nome Completo:"
-                                label-for="user">
-                                <b-form-input v-model="user" id="user" required placeholder="Digite seu nome"></b-form-input>
-                                <button @click="registerPrayer" type="button" style="margin-top: 10px" class="btn btn-info">Registrar</button>
-
-                                <button @click="pushToWatch" type="button" style="margin-top: 10px; margin-left: 10px" class="btn btn-dark">Acompanhar lista de oração</button>
+                            <b-form-group id="user" label-for="user">
+                                <b-form-input v-model="user" id="user" required placeholder="Digite aqui seu nome completo"></b-form-input>
                             </b-form-group>
-                            <b-form-group></b-form-group>
+
+                            <b-form-group>
+                                <button @click="registerPrayer" type="button" class="btn btn-success">Registrar</button>
+                            </b-form-group>
+
+                            <b-form-group>
+                                <button @click="pushToWatch" type="button" class="btn btn-info">Clique aqui se deseja acompanhar a lista de oração</button>
+                            </b-form-group>
                         </b-form>
                     </p>
                 </div>
