@@ -3,7 +3,6 @@ import App from './App.vue'
 
 import './plugins/bootstrap'
 import './plugins/axios'
-import './plugins/sibar-menu'
 
 import router from './router'
 import store from './store/store'

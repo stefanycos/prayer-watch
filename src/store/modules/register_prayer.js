@@ -47,7 +47,7 @@ export default {
                 state.messageClass = 'success'
                 state.messageTitle = 'Sucesso'
              } else {
-                state.message = 'O horário  [' + unavailableHours + '] escolhido não esta mais disponível.'
+                state.message = 'O horário  [' + unavailableHours + '] escolhido não está mais disponível.'
                 state.messageClass = 'warning'
                 state.messageTitle = 'Atenção'
              }

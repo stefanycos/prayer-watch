@@ -37,7 +37,7 @@
             <div class="card text-center border-light">
                 <table class="table table-reponsive-sm table-sm table-striped">
                 <thead>
-                    <b><tr>Horários disponiveis</tr></b>
+                    <b><tr>Horários disponíveis</tr></b>
                 </thead>
                     <tbody>
                         <tr v-for="line in activeHours" :key="line.hour">
