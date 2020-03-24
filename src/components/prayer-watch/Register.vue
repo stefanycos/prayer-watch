@@ -2,7 +2,7 @@
     <div>
         <div class="container" style="margin-top: 20px">
             <div  class="card border-info">
-                <div class="card-title text-center" style="margin-top: 10px"><b>Relógio de Oração AD Brás - Colônia Japonesa</b></div>
+                <div class="card-title text-center" style="margin-top: 10px"><b>Relógio de Oração AD Brás - Colônia Japonesa e Arraial do Bonfim</b></div>
                 <div class="card-body" style="margin-top: -20px">
                     O tempo de oração é de 15 minutos. Se você deseja orar mais, selecione quantos horários quiser. 
                     O objetivo é termos pessoas orando 24 horas por dia.
